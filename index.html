@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch Video</title>
+    <style>
+        #skip-button {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Please watch the following video:</h2>
+    <div>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/otR8V7rlnjA?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <button id="skip-button" onclick="redirect()">Skip Ad</button>
+
+    <script>
+        let videoStartTime = Date.now(); // Record the start time
+
+        // Show the "Skip Ad" button after 5 seconds
+        setTimeout(function() {
+            document.getElementById('skip-button').style.display = 'block';
+        }, 20000);
+
+        // Redirect to the Google Form's final section
+        function redirect() {
+            // Calculate the elapsed time in seconds
+            let elapsedTime = Math.floor((Date.now() - videoStartTime) / 1000);
+            // Construct the Google Form URL with the elapsed time as a query parameter
+            let formUrl = "https://docs.google.com/forms/d/1xJrBxxoE3hx79KQuP2dSv6TILR_MhXfYl6HnTV4ck2M/viewform?entry.445977565=" + elapsedTime;
+            // Redirect to the Google Form
+            window.location.href = formUrl;
+        }
+    </script>
+</body>
+</html>
