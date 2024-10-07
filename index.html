@@ -20,7 +20,7 @@
 <body>
     <h2>Please watch the following video:</h2>
     <div>
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/otR8V7rlnjA?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/watch?v=sMbts7CIYg4?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <button id="skip-button" onclick="redirect()">Skip Ad</button>
@@ -38,7 +38,7 @@
             // Calculate the elapsed time in seconds
             let elapsedTime = Math.floor((Date.now() - videoStartTime) / 1000);
             // Construct the Google Form URL with the elapsed time as a query parameter
-            let formUrl = "https://docs.google.com/forms/d/1xJrBxxoE3hx79KQuP2dSv6TILR_MhXfYl6HnTV4ck2M/viewform?entry.445977565=" + elapsedTime;
+            let formUrl = "https://docs.google.com/forms/d/1WuyXOTJ2jQxDnyr8gCjGBzBhLIBy8yz4cg4pW2gLqks/viewform?entry.445977565=" + elapsedTime;
             // Redirect to the Google Form
             window.location.href = formUrl;
         }
